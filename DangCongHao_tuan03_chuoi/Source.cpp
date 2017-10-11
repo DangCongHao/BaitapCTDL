@@ -53,7 +53,7 @@ void nhapmangsinhvien(sv *&a, int &n)
 		break;
 	}
 }
-void tong(sv *&a, int &n)
+void tong(sv *a, int n)
 {
 	int chon;
 	float dtb;
@@ -72,14 +72,13 @@ void tong(sv *&a, int &n)
 				printf("Diem trung binh la: %f", KQ);
 		break;
 	case 2:
-		printf("nhap diem trung binh: ");
-		scanf_s("%.2f", &dtb);
 		printf("DANH SACH DAU");
 		printf("maso\thoten\tDiemtrungbinh\n");
 		printf("----------------------------");
 		for (int i = 0; i < n; i++)
 		{
-			if (dtb==KQ && KT)
+			dtb= (a->toan + a->ly + a->hoa) / 3;
+			if (dtb>=5&&(a->toan * a->ly * a->hoa != 0))
 			{
 				printf("%d\t%s\t%f\n", a->mssv, a->hovaten, dtb);
 			}	
