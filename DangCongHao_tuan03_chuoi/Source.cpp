@@ -69,7 +69,7 @@ void tong(sv *&a, int &n)
 	case 1:
 			KQ = (a->toan + a->ly + a->hoa) / 3;
 			if (a->toan * a->ly * a->hoa != 0)
-				printf("Diem trung binh la: %d", &KQ);
+				printf("Diem trung binh la: %f", KQ);
 		break;
 	case 2:
 		printf("nhap diem trung binh: ");
